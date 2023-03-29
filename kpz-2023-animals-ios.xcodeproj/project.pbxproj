@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */; };
+		D2D45D4929D4957200821CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4829D4957200821CAB /* ContentView.swift */; };
+		D2D45D4B29D4957200821CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4A29D4957200821CAB /* Assets.xcassets */; };
+		D2D45D4E29D4957200821CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4D29D4957200821CAB /* Preview Assets.xcassets */; };
+		D2D45D5829D4957200821CAB /* kpz_2023_animals_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D5729D4957200821CAB /* kpz_2023_animals_iosTests.swift */; };
+		D2D45D6229D4957200821CAB /* kpz_2023_animals_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D6129D4957200821CAB /* kpz_2023_animals_iosUITests.swift */; };
+		D2D45D6429D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D6329D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2D45D5429D4957200821CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2D45D3B29D4957200821CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2D45D4229D4957200821CAB;
+			remoteInfo = "kpz-2023-animals-ios";
+		};
+		D2D45D5E29D4957200821CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2D45D3B29D4957200821CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2D45D4229D4957200821CAB;
+			remoteInfo = "kpz-2023-animals-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2D45D4329D4957200821CAB /* kpz-2023-animals-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kpz-2023-animals-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosApp.swift; sourceTree = "<group>"; };
+		D2D45D4829D4957200821CAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2D45D4A29D4957200821CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2D45D4D29D4957200821CAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2D45D5329D4957200821CAB /* kpz-2023-animals-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kpz-2023-animals-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D45D5729D4957200821CAB /* kpz_2023_animals_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosTests.swift; sourceTree = "<group>"; };
+		D2D45D5D29D4957200821CAB /* kpz-2023-animals-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kpz-2023-animals-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D45D6129D4957200821CAB /* kpz_2023_animals_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosUITests.swift; sourceTree = "<group>"; };
+		D2D45D6329D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2D45D4029D4957200821CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D5029D4957200821CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D5A29D4957200821CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2D45D3A29D4957200821CAB = {
+			isa = PBXGroup;
+			children = (
+				D2D45D4529D4957200821CAB /* kpz-2023-animals-ios */,
+				D2D45D5629D4957200821CAB /* kpz-2023-animals-iosTests */,
+				D2D45D6029D4957200821CAB /* kpz-2023-animals-iosUITests */,
+				D2D45D4429D4957200821CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2D45D4429D4957200821CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2D45D4329D4957200821CAB /* kpz-2023-animals-ios.app */,
+				D2D45D5329D4957200821CAB /* kpz-2023-animals-iosTests.xctest */,
+				D2D45D5D29D4957200821CAB /* kpz-2023-animals-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2D45D4529D4957200821CAB /* kpz-2023-animals-ios */ = {
+			isa = PBXGroup;
+			children = (
+				D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */,
+				D2D45D4829D4957200821CAB /* ContentView.swift */,
+				D2D45D4A29D4957200821CAB /* Assets.xcassets */,
+				D2D45D4C29D4957200821CAB /* Preview Content */,
+			);
+			path = "kpz-2023-animals-ios";
+			sourceTree = "<group>";
+		};
+		D2D45D4C29D4957200821CAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2D45D4D29D4957200821CAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2D45D5629D4957200821CAB /* kpz-2023-animals-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D45D5729D4957200821CAB /* kpz_2023_animals_iosTests.swift */,
+			);
+			path = "kpz-2023-animals-iosTests";
+			sourceTree = "<group>";
+		};
+		D2D45D6029D4957200821CAB /* kpz-2023-animals-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D45D6129D4957200821CAB /* kpz_2023_animals_iosUITests.swift */,
+				D2D45D6329D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift */,
+			);
+			path = "kpz-2023-animals-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2D45D4229D4957200821CAB /* kpz-2023-animals-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D45D6729D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-ios" */;
+			buildPhases = (
+				D2D45D3F29D4957200821CAB /* Sources */,
+				D2D45D4029D4957200821CAB /* Frameworks */,
+				D2D45D4129D4957200821CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kpz-2023-animals-ios";
+			productName = "kpz-2023-animals-ios";
+			productReference = D2D45D4329D4957200821CAB /* kpz-2023-animals-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2D45D5229D4957200821CAB /* kpz-2023-animals-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D45D6A29D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-iosTests" */;
+			buildPhases = (
+				D2D45D4F29D4957200821CAB /* Sources */,
+				D2D45D5029D4957200821CAB /* Frameworks */,
+				D2D45D5129D4957200821CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2D45D5529D4957200821CAB /* PBXTargetDependency */,
+			);
+			name = "kpz-2023-animals-iosTests";
+			productName = "kpz-2023-animals-iosTests";
+			productReference = D2D45D5329D4957200821CAB /* kpz-2023-animals-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2D45D5C29D4957200821CAB /* kpz-2023-animals-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D45D6D29D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-iosUITests" */;
+			buildPhases = (
+				D2D45D5929D4957200821CAB /* Sources */,
+				D2D45D5A29D4957200821CAB /* Frameworks */,
+				D2D45D5B29D4957200821CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2D45D5F29D4957200821CAB /* PBXTargetDependency */,
+			);
+			name = "kpz-2023-animals-iosUITests";
+			productName = "kpz-2023-animals-iosUITests";
+			productReference = D2D45D5D29D4957200821CAB /* kpz-2023-animals-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2D45D3B29D4957200821CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D2D45D4229D4957200821CAB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D2D45D5229D4957200821CAB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D2D45D4229D4957200821CAB;
+					};
+					D2D45D5C29D4957200821CAB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D2D45D4229D4957200821CAB;
+					};
+				};
+			};
+			buildConfigurationList = D2D45D3E29D4957200821CAB /* Build configuration list for PBXProject "kpz-2023-animals-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2D45D3A29D4957200821CAB;
+			productRefGroup = D2D45D4429D4957200821CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2D45D4229D4957200821CAB /* kpz-2023-animals-ios */,
+				D2D45D5229D4957200821CAB /* kpz-2023-animals-iosTests */,
+				D2D45D5C29D4957200821CAB /* kpz-2023-animals-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2D45D4129D4957200821CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D45D4E29D4957200821CAB /* Preview Assets.xcassets in Resources */,
+				D2D45D4B29D4957200821CAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D5129D4957200821CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D5B29D4957200821CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2D45D3F29D4957200821CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D45D4929D4957200821CAB /* ContentView.swift in Sources */,
+				D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D4F29D4957200821CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D45D5829D4957200821CAB /* kpz_2023_animals_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D45D5929D4957200821CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D45D6229D4957200821CAB /* kpz_2023_animals_iosUITests.swift in Sources */,
+				D2D45D6429D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2D45D5529D4957200821CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2D45D4229D4957200821CAB /* kpz-2023-animals-ios */;
+			targetProxy = D2D45D5429D4957200821CAB /* PBXContainerItemProxy */;
+		};
+		D2D45D5F29D4957200821CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2D45D4229D4957200821CAB /* kpz-2023-animals-ios */;
+			targetProxy = D2D45D5E29D4957200821CAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D2D45D6529D4957200821CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2D45D6629D4957200821CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2D45D6829D4957200821CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kpz-2023-animals-ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2D45D6929D4957200821CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kpz-2023-animals-ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2D45D6B29D4957200821CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kpz-2023-animals-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kpz-2023-animals-ios";
+			};
+			name = Debug;
+		};
+		D2D45D6C29D4957200821CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kpz-2023-animals-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kpz-2023-animals-ios";
+			};
+			name = Release;
+		};
+		D2D45D6E29D4957200821CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kpz-2023-animals-ios";
+			};
+			name = Debug;
+		};
+		D2D45D6F29D4957200821CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "projektZespolowy.kpz-2023-animals-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kpz-2023-animals-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2D45D3E29D4957200821CAB /* Build configuration list for PBXProject "kpz-2023-animals-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D45D6529D4957200821CAB /* Debug */,
+				D2D45D6629D4957200821CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D45D6729D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D45D6829D4957200821CAB /* Debug */,
+				D2D45D6929D4957200821CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D45D6A29D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D45D6B29D4957200821CAB /* Debug */,
+				D2D45D6C29D4957200821CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D45D6D29D4957200821CAB /* Build configuration list for PBXNativeTarget "kpz-2023-animals-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D45D6E29D4957200821CAB /* Debug */,
+				D2D45D6F29D4957200821CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2D45D3B29D4957200821CAB /* Project object */;
+}
