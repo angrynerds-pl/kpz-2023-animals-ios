@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6029F68DE8005718BE /* HomeView.swift */; };
+		D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6229F699BA005718BE /* AnimalProfileView.swift */; };
+		D2C54C6529F6B348005718BE /* ReportLostAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */; };
+		D2C54C6729F6B998005718BE /* ReportFoundAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6629F6B998005718BE /* ReportFoundAnimalView.swift */; };
 		D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */; };
 		D2D45D4B29D4957200821CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4A29D4957200821CAB /* Assets.xcassets */; };
 		D2D45D4E29D4957200821CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4D29D4957200821CAB /* Preview Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2C54C6029F68DE8005718BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D2C54C6229F699BA005718BE /* AnimalProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalProfileView.swift; sourceTree = "<group>"; };
+		D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostAnimalView.swift; sourceTree = "<group>"; };
+		D2C54C6629F6B998005718BE /* ReportFoundAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoundAnimalView.swift; sourceTree = "<group>"; };
 		D2D45D4329D4957200821CAB /* kpz-2023-animals-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kpz-2023-animals-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosApp.swift; sourceTree = "<group>"; };
 		D2D45D4829D4957200821CAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,11 +108,15 @@
 		D2D45D4529D4957200821CAB /* kpz-2023-animals-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D2D45D4829D4957200821CAB /* ContentView.swift */,
+				D2D45D7029DD72BF00821CAB /* Animal.swift */,
+				D2C54C6229F699BA005718BE /* AnimalProfileView.swift */,
+				D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */,
+				D2C54C6629F6B998005718BE /* ReportFoundAnimalView.swift */,
+				D2C54C6029F68DE8005718BE /* HomeView.swift */,
 				D2D45D7629DD776C00821CAB /* AnimalListView.swift */,
 				D2D45D7429DD732200821CAB /* AnimalTIleView.swift */,
-				D2D45D7029DD72BF00821CAB /* Animal.swift */,
 				D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */,
-				D2D45D4829D4957200821CAB /* ContentView.swift */,
 				D2D45D4A29D4957200821CAB /* Assets.xcassets */,
 				D2D45D4C29D4957200821CAB /* Preview Content */,
 			);
@@ -266,11 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C54C6529F6B348005718BE /* ReportLostAnimalView.swift in Sources */,
+				D2C54C6729F6B998005718BE /* ReportFoundAnimalView.swift in Sources */,
 				D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */,
 				D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */,
 				D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */,
+				D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */,
 				D2D45D7529DD732200821CAB /* AnimalTIleView.swift in Sources */,
 				D2D45D7129DD72BF00821CAB /* Animal.swift in Sources */,
+				D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

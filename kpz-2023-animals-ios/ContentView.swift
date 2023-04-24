@@ -9,18 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let mockAnimals = [
-        Animal(description: "Frodo\nLublin\n05.04.2023", image: "6"),
-        Animal(description: "Frodo\nLublin\n05.04.2023", image: "7"),
-        Animal(description: "Bella\nWrocław\n25.03.2023", image: "2"),
-        Animal(description: "Bella\nWrocław\n30.03.2023", image: "3"),
-        Animal(description: "Pumba\nOpole\n2.04.2023", image: "4"),
-        Animal(description: "Pumba\nOpole\n1.04.2023", image: "5"),
-        Animal(description: "Hektor\nKamieniec\n3.04.2022", image: "1")
-    ]
+    @State private var mockAnimals: [Animal]
+    
+    let dateFormatter: DateFormatter
+    
+    init() {
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        
+        mockAnimals = [
+            Animal(name: "Frodo",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
+                   image: "6", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec",
+                   dateLost: dateFormatter.date(from: "2023/05/04")),
+            
+            Animal(name: "Frodo",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
+                   image: "7", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec",
+                   dateLost: dateFormatter.date(from: "2023/05/04"), dateFound: dateFormatter.date(from: "2023/05/06")),
+            
+            Animal(name: "Bella",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales, eleifend sit amet libero. Morbi accumsan nisi id urna porttitor congue. Proin scelerisque dolor non urna vulputate mattis. Fusce vel sapien nec sem bibendum viverra. Cras consequat ligula vel ipsum semper, a blandit lectus hendrerit.",
+                   image: "2", city: "Wrocław", species: "Pies", gender: "Samica",
+                   dateLost: dateFormatter.date(from: "2023/03/25")),
+            
+            Animal(name: "Bella",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales, eleifend sit amet libero. Morbi accumsan nisi id urna porttitor congue. Proin scelerisque dolor non urna vulputate mattis. Fusce vel sapien nec sem bibendum viverra. Cras consequat ligula vel ipsum semper, a blandit lectus hendrerit. ",
+                   image: "3", city: "Wrocław", species: "Pies", gender: "Samica",
+                   dateLost: dateFormatter.date(from: "2023/03/30")),
+            
+            Animal(name: "Pumba",
+                   description: "Opole",
+                   image: "4", city: "Opole", species: "Pies", gender: "Samiec",
+                   dateLost: dateFormatter.date(from: "2023/04/02")),
+            
+            Animal(name: "Pumba",
+                   description: "Opole",
+                   image: "5", city: "Opole", species: "Pies", gender: "Samiec",
+                   dateLost: dateFormatter.date(from: "2023/04/01")),
+            
+            Animal(name: "Hektor",
+                   description: "Kamieniec",
+                   image: "1", city: "Kamieniec", species: "Pies", gender: "Samiec",
+                   dateLost: dateFormatter.date(from: "2023/04/03"), dateFound: dateFormatter.date(from: "2023/04/08"))
+        ]
+    }
+
     
     var body: some View {
-        AnimalListView(animals: mockAnimals)
+        HomeView(animals: $mockAnimals)
     }
 }
 

@@ -9,18 +9,41 @@ import SwiftUI
 
 struct AnimalTileView: View {
     let animal: Animal
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "pl_PL")
+        return formatter
+    }
 
     var body: some View {
-        HStack {
-            Image(animal.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .cornerRadius(10)
+        NavigationLink(destination: AnimalProfileView(animal: animal)) {
+            HStack {
+                Image(animal.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 140, height: 140)
+                    .cornerRadius(10)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(animal.name)
+                        .font(.system(size: 26, weight: .semibold))
+                    
+                    if let dateLost = animal.dateLost {
+                        Text("Data zaginięcia: \(dateFormatter.string(from: dateLost))")
+                            .font(.system(size: 16))
+                    }
 
-            Text(animal.description)
-                .font(.system(size: 20))
+                    if let dateFound = animal.dateFound {
+                        Text("Data znalezienia: \(dateFormatter.string(from: dateFound))")
+                            .font(.system(size: 16))
+                    }
+                }
                 .padding(.leading, 10)
+            }
+            .padding(.vertical, 10)
         }
     }
 }
