@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let mockAnimals = [
+        Animal(description: "Frodo\nLublin\n05.04.2023", image: "6"),
+        Animal(description: "Frodo\nLublin\n05.04.2023", image: "7"),
+        Animal(description: "Bella\nWrocław\n25.03.2023", image: "2"),
+        Animal(description: "Bella\nWrocław\n30.03.2023", image: "3"),
+        Animal(description: "Pumba\nOpole\n2.04.2023", image: "4"),
+        Animal(description: "Pumba\nOpole\n1.04.2023", image: "5"),
+        Animal(description: "Hektor\nKamieniec\n3.04.2022", image: "1")
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        AnimalListView(animals: mockAnimals)
     }
 }
 

@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */; };
-		D2D45D4929D4957200821CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4829D4957200821CAB /* ContentView.swift */; };
 		D2D45D4B29D4957200821CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4A29D4957200821CAB /* Assets.xcassets */; };
 		D2D45D4E29D4957200821CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D45D4D29D4957200821CAB /* Preview Assets.xcassets */; };
 		D2D45D5829D4957200821CAB /* kpz_2023_animals_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D5729D4957200821CAB /* kpz_2023_animals_iosTests.swift */; };
 		D2D45D6229D4957200821CAB /* kpz_2023_animals_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D6129D4957200821CAB /* kpz_2023_animals_iosUITests.swift */; };
 		D2D45D6429D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D6329D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift */; };
+		D2D45D7129DD72BF00821CAB /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D7029DD72BF00821CAB /* Animal.swift */; };
+		D2D45D7529DD732200821CAB /* AnimalTIleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D7429DD732200821CAB /* AnimalTIleView.swift */; };
+		D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D7629DD776C00821CAB /* AnimalListView.swift */; };
+		D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4829D4957200821CAB /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D2D45D5D29D4957200821CAB /* kpz-2023-animals-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kpz-2023-animals-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D45D6129D4957200821CAB /* kpz_2023_animals_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosUITests.swift; sourceTree = "<group>"; };
 		D2D45D6329D4957200821CAB /* kpz_2023_animals_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpz_2023_animals_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2D45D7029DD72BF00821CAB /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		D2D45D7429DD732200821CAB /* AnimalTIleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTIleView.swift; sourceTree = "<group>"; };
+		D2D45D7629DD776C00821CAB /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		D2D45D4529D4957200821CAB /* kpz-2023-animals-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D2D45D7629DD776C00821CAB /* AnimalListView.swift */,
+				D2D45D7429DD732200821CAB /* AnimalTIleView.swift */,
+				D2D45D7029DD72BF00821CAB /* Animal.swift */,
 				D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */,
 				D2D45D4829D4957200821CAB /* ContentView.swift */,
 				D2D45D4A29D4957200821CAB /* Assets.xcassets */,
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D45D4929D4957200821CAB /* ContentView.swift in Sources */,
+				D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */,
+				D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */,
 				D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */,
+				D2D45D7529DD732200821CAB /* AnimalTIleView.swift in Sources */,
+				D2D45D7129DD72BF00821CAB /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
