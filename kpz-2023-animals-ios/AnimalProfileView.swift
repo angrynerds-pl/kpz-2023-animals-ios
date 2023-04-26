@@ -52,7 +52,7 @@ struct AnimalProfileView: View {
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
                 
-                Text("Miejsce zaginięcia: \(animal.city)")
+                Text("\((animal.dateLost != nil) || (animal.dateFound != nil) ? "Miejsce zaginięcia:" : "Miasto:") \(animal.city)")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)

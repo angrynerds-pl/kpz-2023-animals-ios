@@ -10,12 +10,19 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var mockAnimals: [Animal]
+    @State private var mockOwnedAnimals: [Animal]
     
     let dateFormatter: DateFormatter
     
     init() {
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
+        
+        mockOwnedAnimals = [
+            Animal(name: "Frodo",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
+                   image: "6", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec")
+        ]
         
         mockAnimals = [
             Animal(name: "Frodo",
@@ -57,7 +64,7 @@ struct ContentView: View {
 
     
     var body: some View {
-        HomeView(animals: $mockAnimals)
+        HomeView(animals: $mockAnimals, ownedAnimals: $mockOwnedAnimals)
     }
 }
 
