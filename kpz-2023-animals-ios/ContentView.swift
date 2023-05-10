@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var mockAnimals: [Animal]
     @State private var mockOwnedAnimals: [Animal]
+    @State private var mockTrainings: [Training]
     
     let dateFormatter: DateFormatter
     
@@ -60,11 +61,20 @@ struct ContentView: View {
                    image: "1", city: "Kamieniec", species: "Pies", gender: "Samiec",
                    dateLost: dateFormatter.date(from: "2023/04/03"), dateFound: dateFormatter.date(from: "2023/04/08"))
         ]
+        
+        mockTrainings = [
+            Training(image: "1", name: "Szkolenie 1", location: "Wrocław", description: "Opis szkolenia 1"),
+            Training(image: "1", name: "Szkolenie 2", location: "Warszawa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien"),
+            Training(image: "1", name: "Szkolenie 3", location: "Kraków", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales, eleifend sit amet libero. Morbi accumsan nisi id urna porttitor congue. Proin scelerisque dolor non urna vulputate mattis."),
+            Training(image: "1", name: "Szkolenie 4", location: "Poznań", description: "Opis szkolenia 4"),
+            Training(image: "1", name: "Szkolenie 5", location: "Gdańsk", description: "Opis szkolenia 5")
+        ]
+
     }
 
     
     var body: some View {
-        HomeView(animals: $mockAnimals, ownedAnimals: $mockOwnedAnimals)
+        HomeView(animals: $mockAnimals, ownedAnimals: $mockOwnedAnimals, trainings: $mockTrainings)
     }
 }
 

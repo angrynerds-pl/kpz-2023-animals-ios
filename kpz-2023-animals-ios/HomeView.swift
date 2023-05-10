@@ -10,6 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @Binding var animals: [Animal]
     @Binding var ownedAnimals: [Animal]
+    @Binding var trainings: [Training]
+    
+    @State private var showLoginView = false
+    @State private var showRegistrationView = false
     
     var body: some View {
         NavigationView {
@@ -63,29 +67,100 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         }
                         
-                        NavigationLink(destination: ReportLostAnimalView(animals: $animals)) {
+                        NavigationLink(destination: TrainingListView(trainings: trainings)) {
                             Text("Szkolenia")
                                 .frame(width: 120, height: 100)
                                 .padding()
                                 .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
-                        }.disabled(true).opacity(0.5)
+                        }
                         
-                        NavigationLink(destination: ReportLostAnimalView(animals: $animals)) {
+                        NavigationLink(destination: VetClinicsMapView()) {
                             Text("Przychodnie weterynaryjne")
                                 .frame(width: 120, height: 100)
                                 .padding()
                                 .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
-                        }.disabled(true).opacity(0.5)
+                        }
                         
                     }
                     .padding(40)
                 }
             }
             .navigationBarTitle("Ekran główny", displayMode: .inline)
+            .navigationBarItems(leading:
+                Menu {
+                    Button(action: { showLoginView = true }) {
+                        Text("Logowanie")
+                        Image(systemName: "person.circle")
+                    }
+                    
+                    Button(action: { showRegistrationView = true }) {
+                        Text("Rejestracja")
+                        Image(systemName: "person.badge.plus")
+                    }
+                } label: {
+                    Image(systemName: "ellipsis")
+                        .padding()
+                        .accessibilityLabel("Więcej opcji")
+                }
+            )
+            .fullScreenCover(isPresented: $showLoginView) {
+                LoginView()
+            }
+            .fullScreenCover(isPresented: $showRegistrationView) {
+                RegistrationView()
+            }
+        }
+    }
+}
+
+struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Email", text: $email)
+                    SecureField("Hasło", text: $password)
+                }
+                Button("Zaloguj") {
+                    print("Logowanie... email: \(email)     hasło: \(password)")
+                }
+            }
+            .navigationBarTitle("Logowanie", displayMode: .inline)
+            .navigationBarItems(leading: Button("Zamknij") { presentationMode.wrappedValue.dismiss() })
+        }
+    }
+}
+
+struct RegistrationView: View {
+    @State private var email = ""
+    @State private var password = ""
+    @State private var confirmPassword = ""
+    @State private var name = ""
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Email", text: $email)
+                    SecureField("Hasło", text: $password)
+                    SecureField("Powtórz hasło", text: $confirmPassword)
+                    TextField("Imię", text: $name)
+                }
+                Button("Zarejestruj") {
+                    print("Rejestracja... email: \(email)   hasło: \(password)  powtórzone hasło: \(confirmPassword)    imię: \(name)")
+                }
+            }
+            .navigationBarTitle("Rejestracja", displayMode: .inline)
+            .navigationBarItems(leading: Button("Zamknij") { presentationMode.wrappedValue.dismiss() })
         }
     }
 }

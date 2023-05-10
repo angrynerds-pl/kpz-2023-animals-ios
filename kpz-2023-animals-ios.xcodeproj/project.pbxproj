@@ -23,6 +23,11 @@
 		D2D45D7529DD732200821CAB /* AnimalTIleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D7429DD732200821CAB /* AnimalTIleView.swift */; };
 		D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D7629DD776C00821CAB /* AnimalListView.swift */; };
 		D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D45D4829D4957200821CAB /* ContentView.swift */; };
+		D2E193122A0B878600E6FDD0 /* VetClinicsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E193112A0B878600E6FDD0 /* VetClinicsMapView.swift */; };
+		D2E193142A0B992900E6FDD0 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E193132A0B992900E6FDD0 /* Training.swift */; };
+		D2E193162A0B997900E6FDD0 /* TrainingTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E193152A0B997900E6FDD0 /* TrainingTileView.swift */; };
+		D2E193182A0B999D00E6FDD0 /* TrainingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E193172A0B999D00E6FDD0 /* TrainingProfileView.swift */; };
+		D2E1931A2A0B9A0200E6FDD0 /* TrainingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E193192A0B9A0200E6FDD0 /* TrainingListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		D2D45D7029DD72BF00821CAB /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		D2D45D7429DD732200821CAB /* AnimalTIleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTIleView.swift; sourceTree = "<group>"; };
 		D2D45D7629DD776C00821CAB /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		D2E193112A0B878600E6FDD0 /* VetClinicsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetClinicsMapView.swift; sourceTree = "<group>"; };
+		D2E193132A0B992900E6FDD0 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		D2E193152A0B997900E6FDD0 /* TrainingTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTileView.swift; sourceTree = "<group>"; };
+		D2E193172A0B999D00E6FDD0 /* TrainingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProfileView.swift; sourceTree = "<group>"; };
+		D2E193192A0B9A0200E6FDD0 /* TrainingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +125,18 @@
 				D2D45D4829D4957200821CAB /* ContentView.swift */,
 				D2D45D7029DD72BF00821CAB /* Animal.swift */,
 				D2C54C6229F699BA005718BE /* AnimalProfileView.swift */,
+				D2D45D7629DD776C00821CAB /* AnimalListView.swift */,
+				D2D45D7429DD732200821CAB /* AnimalTIleView.swift */,
 				D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */,
 				D2C54C6629F6B998005718BE /* ReportFoundAnimalView.swift */,
 				D2C54C6029F68DE8005718BE /* HomeView.swift */,
-				D2D45D7629DD776C00821CAB /* AnimalListView.swift */,
 				D2C54C6829F6C1C5005718BE /* OwnedAnimalListWiev.swift */,
 				D2C54C6C29F6C481005718BE /* NewOwnedAnimalView.swift */,
-				D2D45D7429DD732200821CAB /* AnimalTIleView.swift */,
+				D2E193112A0B878600E6FDD0 /* VetClinicsMapView.swift */,
+				D2E193132A0B992900E6FDD0 /* Training.swift */,
+				D2E193172A0B999D00E6FDD0 /* TrainingProfileView.swift */,
+				D2E193192A0B9A0200E6FDD0 /* TrainingListView.swift */,
+				D2E193152A0B997900E6FDD0 /* TrainingTileView.swift */,
 				D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */,
 				D2D45D4A29D4957200821CAB /* Assets.xcassets */,
 				D2D45D4C29D4957200821CAB /* Preview Content */,
@@ -288,12 +303,17 @@
 				D2C54C6729F6B998005718BE /* ReportFoundAnimalView.swift in Sources */,
 				D2C54C6D29F6C481005718BE /* NewOwnedAnimalView.swift in Sources */,
 				D2C54C6929F6C1C5005718BE /* OwnedAnimalListWiev.swift in Sources */,
+				D2E1931A2A0B9A0200E6FDD0 /* TrainingListView.swift in Sources */,
 				D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */,
 				D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */,
 				D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */,
+				D2E193122A0B878600E6FDD0 /* VetClinicsMapView.swift in Sources */,
+				D2E193142A0B992900E6FDD0 /* Training.swift in Sources */,
 				D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */,
 				D2D45D7529DD732200821CAB /* AnimalTIleView.swift in Sources */,
 				D2D45D7129DD72BF00821CAB /* Animal.swift in Sources */,
+				D2E193182A0B999D00E6FDD0 /* TrainingProfileView.swift in Sources */,
+				D2E193162A0B997900E6FDD0 /* TrainingTileView.swift in Sources */,
 				D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
