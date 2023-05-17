@@ -33,7 +33,9 @@ struct VetClinicsMapView: View {
             Map(coordinateRegion: $region, annotationItems: locations) { location in
                 MapAnnotation(coordinate: location.coordinate) {
                     Button(action: {
-                        selectedLocation = location
+                        DispatchQueue.main.async {
+                            selectedLocation = location
+                        }
                     }) {
                         Image(systemName: "mappin.circle.fill")
                             .font(.system(size: 30))
@@ -45,6 +47,7 @@ struct VetClinicsMapView: View {
             .onTapGesture {
                 selectedLocation = nil
             }
+            .ignoresSafeArea()
             
             if let location = selectedLocation {
                 VStack {

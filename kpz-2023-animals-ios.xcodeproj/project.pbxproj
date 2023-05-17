@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2B946CC2A14C92E00281429 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B946CB2A14C92E00281429 /* ImagePicker.swift */; };
 		D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6029F68DE8005718BE /* HomeView.swift */; };
 		D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6229F699BA005718BE /* AnimalProfileView.swift */; };
 		D2C54C6529F6B348005718BE /* ReportLostAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2B946CB2A14C92E00281429 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D2C54C6029F68DE8005718BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D2C54C6229F699BA005718BE /* AnimalProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalProfileView.swift; sourceTree = "<group>"; };
 		D2C54C6429F6B348005718BE /* ReportLostAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostAnimalView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				D2E193172A0B999D00E6FDD0 /* TrainingProfileView.swift */,
 				D2E193192A0B9A0200E6FDD0 /* TrainingListView.swift */,
 				D2E193152A0B997900E6FDD0 /* TrainingTileView.swift */,
+				D2B946CB2A14C92E00281429 /* ImagePicker.swift */,
 				D2D45D4629D4957200821CAB /* kpz_2023_animals_iosApp.swift */,
 				D2D45D4A29D4957200821CAB /* Assets.xcassets */,
 				D2D45D4C29D4957200821CAB /* Preview Content */,
@@ -302,6 +305,7 @@
 				D2C54C6529F6B348005718BE /* ReportLostAnimalView.swift in Sources */,
 				D2C54C6729F6B998005718BE /* ReportFoundAnimalView.swift in Sources */,
 				D2C54C6D29F6C481005718BE /* NewOwnedAnimalView.swift in Sources */,
+				D2B946CC2A14C92E00281429 /* ImagePicker.swift in Sources */,
 				D2C54C6929F6C1C5005718BE /* OwnedAnimalListWiev.swift in Sources */,
 				D2E1931A2A0B9A0200E6FDD0 /* TrainingListView.swift in Sources */,
 				D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */,

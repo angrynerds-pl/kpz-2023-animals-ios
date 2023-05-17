@@ -20,6 +20,9 @@ struct NewOwnedAnimalView: View {
     @State private var gender: String = ""
     @State private var dateLost: Date = Date()
     
+    @State private var showImagePicker = false
+    @State private var pickedImage: UIImage?
+    
     private var isFormValid: Bool {
         !name.isEmpty && !description.isEmpty && !image.isEmpty &&
         !city.isEmpty && !species.isEmpty && !breed.isEmpty && !gender.isEmpty
@@ -28,6 +31,27 @@ struct NewOwnedAnimalView: View {
     var body: some View {
         NavigationView {
             Form {
+                ZStack {
+                    if let uiImage = pickedImage {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFit()
+                    } else {
+                        Rectangle()
+                            .fill(.secondary)
+                            .frame(height: 100)
+                        Text("Dodaj zdjęcie")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    }
+                }
+                .onTapGesture {
+                    showImagePicker.toggle()
+                }
+                .sheet(isPresented: $showImagePicker) {
+                    ImagePicker(image: $pickedImage)
+                }
+                
                 Section(header: Text("Podstawowe informacje")) {
                     TextField("Imię", text: $name)
                     TextField("Opis", text: $description)
