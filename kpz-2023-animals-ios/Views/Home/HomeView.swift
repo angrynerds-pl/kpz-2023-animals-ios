@@ -14,7 +14,7 @@ struct HomeView: View {
     @State private var showRegistrationView = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     Image("6")

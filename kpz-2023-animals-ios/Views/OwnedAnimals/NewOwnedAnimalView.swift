@@ -72,7 +72,7 @@ struct NewOwnedAnimalView: View {
                                            species: species,
                                            breed: breed,
                                            gender: gender)
-                    ownedAnimalViewModel.addOwnedAnimal(newAnimal)
+                    ownedAnimalViewModel.addOwnedAnimal(animal: newAnimal)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Zatwierdź")

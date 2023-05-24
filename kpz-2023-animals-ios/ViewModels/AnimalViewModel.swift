@@ -8,11 +8,11 @@
 import Foundation
 
 class AnimalViewModel: ObservableObject {
-    @Published var animals = [Animal]()
-    
-    let dateFormatter: DateFormatter
+    @Published var animals: [Animal] = []
     
     init() {
+        let dateFormatter: DateFormatter
+        
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         

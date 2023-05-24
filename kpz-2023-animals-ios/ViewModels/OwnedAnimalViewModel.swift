@@ -8,13 +8,17 @@
 import Foundation
 
 class OwnedAnimalViewModel: ObservableObject {
-    @Published var ownedAnimals: [Animal] = [
-        Animal(name: "Frodo",
-               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
-               image: "6", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec")
-    ]
+    @Published var ownedAnimals: [Animal] = []
     
-    func addOwnedAnimal(_ animal: Animal) {
+    init() {
+        ownedAnimals = [
+            Animal(name: "Frodo",
+                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
+                   image: "6", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec")
+        ]
+    }
+    
+    func addOwnedAnimal(animal: Animal) {
         ownedAnimals.append(animal)
     }
 }

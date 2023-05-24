@@ -8,34 +8,18 @@
 import SwiftUI
 import MapKit
 
-struct Location: Identifiable {
-    let id = UUID()
-    let name: String
-    let address: String
-    let coordinate: CLLocationCoordinate2D
-}
-
 struct VetClinicsMapView: View {
+    @StateObject var viewModel = VetClinicsMapViewModel()
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 51.1078852, longitude: 17.0385376),
         span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     
-    let locations = [
-        Location(name: "VetPlanet", address: "ul. Bajana 1, 53-680 Wrocław, Polska", coordinate: CLLocationCoordinate2D(latitude: 51.1027822, longitude: 17.0523444)),
-        Location(name: "WETerynaria", address: "ul. Legnicka 52, 54-204 Wrocław, Polska", coordinate: CLLocationCoordinate2D(latitude: 51.1262675, longitude: 16.9879264)),
-        Location(name: "Arka", address: "ul. Wiśniowa 56, 53-137 Wrocław, Polska", coordinate: CLLocationCoordinate2D(latitude: 51.0961986, longitude: 17.0250917)),
-    ]
-    
-    @State private var selectedLocation: Location? = nil
-    
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region, annotationItems: locations) { location in
+            Map(coordinateRegion: $region, annotationItems: viewModel.locations) { location in
                 MapAnnotation(coordinate: location.coordinate) {
                     Button(action: {
-                        DispatchQueue.main.async {
-                            selectedLocation = location
-                        }
+                        viewModel.selectLocation(location: location)
                     }) {
                         Image(systemName: "mappin.circle.fill")
                             .font(.system(size: 30))
@@ -44,12 +28,9 @@ struct VetClinicsMapView: View {
                 }
             }
             .navigationTitle("Przychodnie weterynaryjne")
-            .onTapGesture {
-                selectedLocation = nil
-            }
             .ignoresSafeArea()
             
-            if let location = selectedLocation {
+            if let location = viewModel.selectedLocation {
                 VStack {
                     Spacer()
                     HStack {
@@ -75,6 +56,9 @@ struct VetClinicsMapView: View {
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 10)
+                            .onTapGesture {
+                                viewModel.deselectLocation()
+                            }
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
