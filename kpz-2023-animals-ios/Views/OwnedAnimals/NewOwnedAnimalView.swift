@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewOwnedAnimalView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var ownedAnimals: [Animal]
+    @ObservedObject var ownedAnimalViewModel: OwnedAnimalViewModel
 
     @State private var name: String = ""
     @State private var description: String = ""
@@ -72,7 +72,7 @@ struct NewOwnedAnimalView: View {
                                            species: species,
                                            breed: breed,
                                            gender: gender)
-                    ownedAnimals.append(newAnimal)
+                    ownedAnimalViewModel.addOwnedAnimal(newAnimal)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Zatwierdź")

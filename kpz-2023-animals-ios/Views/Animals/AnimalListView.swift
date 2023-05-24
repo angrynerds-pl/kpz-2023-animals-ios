@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct AnimalListView: View {
-    let animals: [Animal]
+    @ObservedObject var animalVM: AnimalViewModel
 
     var body: some View {
         NavigationView {
-            List(animals) { animal in
+            List(animalVM.animals) { animal in
                 AnimalTileView(animal: animal)
             }
             .navigationBarTitle("Zaginione zwierzęta")

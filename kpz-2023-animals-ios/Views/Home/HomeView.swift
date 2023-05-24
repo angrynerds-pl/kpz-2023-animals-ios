@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var animals: [Animal]
-    @Binding var ownedAnimals: [Animal]
-    @Binding var trainings: [Training]
+    @StateObject var animalViewModel = AnimalViewModel()
     
     @State private var showLoginView = false
     @State private var showRegistrationView = false
@@ -31,7 +29,7 @@ struct HomeView: View {
                     ]
                     
                     LazyVGrid(columns: columns, spacing: 20) {
-                        NavigationLink(destination: ReportLostAnimalView(animals: $animals)) {
+                        NavigationLink(destination: ReportLostAnimalView(animalVM: animalViewModel)) {
                             Text("Zgłoszenie zaginięcia")
                                 .frame(width: 120, height: 100)
                                 .padding()
@@ -40,7 +38,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         }
                         
-                        NavigationLink(destination: ReportFoundAnimalView(animals: $animals)) {
+                        NavigationLink(destination: ReportFoundAnimalView(animalVM: animalViewModel)) {
                             Text("Zgłoszenie znalezienia")
                                 .frame(width: 120, height: 100)
                                 .padding()
@@ -49,7 +47,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         }
                         
-                        NavigationLink(destination: AnimalListView(animals: animals)) {
+                        NavigationLink(destination: AnimalListView(animalVM: animalViewModel)) {
                             Text("Przegląd zaginionych zwierząt")
                                 .frame(width: 120, height: 100)
                                 .padding()
@@ -58,7 +56,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         }
                         
-                        NavigationLink(destination: OwnedAnimalListView(ownedAnimals: $ownedAnimals)) {
+                        NavigationLink(destination: OwnedAnimalListView()) {
                             Text("Profil zwierzaka")
                                 .frame(width: 120, height: 100)
                                 .padding()
@@ -67,7 +65,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         }
                         
-                        NavigationLink(destination: TrainingListView(trainings: trainings)) {
+                        NavigationLink(destination: TrainingListView()) {
                             Text("Szkolenia")
                                 .frame(width: 120, height: 100)
                                 .padding()

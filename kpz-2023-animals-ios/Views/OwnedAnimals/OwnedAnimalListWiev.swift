@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct OwnedAnimalListView: View {
-    @Binding var ownedAnimals: [Animal]
+    @ObservedObject var ownedAnimalViewModel = OwnedAnimalViewModel()
 
     var body: some View {
         NavigationView {
             VStack {
-                List(ownedAnimals) { animal in
+                List(ownedAnimalViewModel.ownedAnimals) { animal in
                     AnimalTileView(animal: animal)
                 }
-                
                 .navigationBarTitle("Twoje zwierzęta")
                 
-                NavigationLink(destination: NewOwnedAnimalView(ownedAnimals: $ownedAnimals)) {
+                NavigationLink(destination: NewOwnedAnimalView(ownedAnimalViewModel: ownedAnimalViewModel)) {
                     Text("Dodaj")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
@@ -27,7 +26,6 @@ struct OwnedAnimalListView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                
                 .padding(.horizontal)
             }
         }

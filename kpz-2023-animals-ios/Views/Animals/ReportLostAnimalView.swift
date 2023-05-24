@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
-struct ReportFoundAnimalView: View {
+struct ReportLostAnimalView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var animals: [Animal]
+    @ObservedObject var animalVM: AnimalViewModel
 
     @State private var name: String = ""
     @State private var description: String = ""
@@ -18,7 +19,7 @@ struct ReportFoundAnimalView: View {
     @State private var species: String = ""
     @State private var breed: String = ""
     @State private var gender: String = ""
-    @State private var dateFound: Date = Date()
+    @State private var dateLost: Date = Date()
     
     @State private var showImagePicker = false
     @State private var pickedImage: UIImage?
@@ -56,7 +57,7 @@ struct ReportFoundAnimalView: View {
                     TextField("Imię", text: $name)
                     TextField("Opis", text: $description)
                     TextField("Miejsce zaginięcia", text: $city)
-                    DatePicker("Data znalezienia", selection: $dateFound, displayedComponents: .date)
+                    DatePicker("Data zaginięcia", selection: $dateLost, displayedComponents: .date)
                 }
 
                 Section(header: Text("Dodatkowe informacje")) {
@@ -73,8 +74,8 @@ struct ReportFoundAnimalView: View {
                                            species: species,
                                            breed: breed,
                                            gender: gender,
-                                           dateFound: dateFound)
-                    animals.append(newAnimal)
+                                           dateLost: dateLost)
+                    animalVM.addLostAnimal(animal: newAnimal)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Zatwierdź")
@@ -86,7 +87,7 @@ struct ReportFoundAnimalView: View {
                 }
                 .disabled(!isFormValid)
             }
-            .navigationBarTitle("Zgłoś znalezienie", displayMode: .inline)
+            .navigationBarTitle("Zgłoś zaginięcie", displayMode: .inline)
         }
     }
 }

@@ -14,5 +14,3 @@ struct Training: Identifiable {
     let location: String
     let description: String
 }
-
-

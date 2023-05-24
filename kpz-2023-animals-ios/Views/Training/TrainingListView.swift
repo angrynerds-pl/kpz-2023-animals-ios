@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TrainingListView: View {
-    let trainings: [Training]
+    @ObservedObject var viewModel = TrainingListViewModel()
 
     var body: some View {
         NavigationView {
-            List(trainings) { training in
+            List(viewModel.trainings) { training in
                 TrainingTileView(training: training)
             }
             .navigationBarTitle("Szkolenia")

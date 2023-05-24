@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import UIKit
 
-struct ReportLostAnimalView: View {
+struct ReportFoundAnimalView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var animals: [Animal]
+    @ObservedObject var animalVM: AnimalViewModel
 
     @State private var name: String = ""
     @State private var description: String = ""
@@ -19,7 +18,7 @@ struct ReportLostAnimalView: View {
     @State private var species: String = ""
     @State private var breed: String = ""
     @State private var gender: String = ""
-    @State private var dateLost: Date = Date()
+    @State private var dateFound: Date = Date()
     
     @State private var showImagePicker = false
     @State private var pickedImage: UIImage?
@@ -57,7 +56,7 @@ struct ReportLostAnimalView: View {
                     TextField("Imię", text: $name)
                     TextField("Opis", text: $description)
                     TextField("Miejsce zaginięcia", text: $city)
-                    DatePicker("Data zaginięcia", selection: $dateLost, displayedComponents: .date)
+                    DatePicker("Data znalezienia", selection: $dateFound, displayedComponents: .date)
                 }
 
                 Section(header: Text("Dodatkowe informacje")) {
@@ -74,8 +73,8 @@ struct ReportLostAnimalView: View {
                                            species: species,
                                            breed: breed,
                                            gender: gender,
-                                           dateLost: dateLost)
-                    animals.append(newAnimal)
+                                           dateFound: dateFound)
+                    animalVM.addFoundAnimal(animal: newAnimal)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Zatwierdź")
@@ -87,7 +86,10 @@ struct ReportLostAnimalView: View {
                 }
                 .disabled(!isFormValid)
             }
-            .navigationBarTitle("Zgłoś zaginięcie", displayMode: .inline)
+            .navigationBarTitle("Zgłoś znalezienie", displayMode: .inline)
         }
     }
 }
+
+
+
