@@ -13,9 +13,12 @@ struct AnimalListView: View {
     var body: some View {
         NavigationView {
             List(animalVM.animals) { animal in
-                AnimalTileView(animal: animal)
+                AnimalTileView(animal: animal.animal, lostReport: animal)
             }
             .navigationBarTitle("Zaginione zwierzęta")
+            .task {
+                await animalVM.fetchLostReports()
+            }
         }
     }
 }

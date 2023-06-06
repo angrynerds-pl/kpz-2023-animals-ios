@@ -14,9 +14,10 @@ struct OwnedAnimalListView: View {
         NavigationView {
             VStack {
                 List(ownedAnimalViewModel.ownedAnimals) { animal in
-                    AnimalTileView(animal: animal)
+                    OwnedAnimalTileView(animal: animal)
                 }
                 .navigationBarTitle("Twoje zwierzęta")
+                
                 
                 NavigationLink(destination: NewOwnedAnimalView(ownedAnimalViewModel: ownedAnimalViewModel)) {
                     Text("Dodaj")

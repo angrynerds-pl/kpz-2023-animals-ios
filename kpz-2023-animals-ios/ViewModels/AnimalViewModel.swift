@@ -8,57 +8,44 @@
 import Foundation
 
 class AnimalViewModel: ObservableObject {
-    @Published var animals: [Animal] = []
-    
-    init() {
-        let dateFormatter: DateFormatter
-        
-        dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        
-        animals = [
-            Animal(name: "Frodo",
-                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
-                   image: "6", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec",
-                   dateLost: dateFormatter.date(from: "2023/05/04")),
-            
-            Animal(name: "Frodo",
-                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales",
-                   image: "7", city: "Lublin", species: "Pies", breed: "Yorkshire Terrier", gender: "Samiec",
-                   dateLost: dateFormatter.date(from: "2023/05/04"), dateFound: dateFormatter.date(from: "2023/05/06")),
-            
-            Animal(name: "Bella",
-                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales, eleifend sit amet libero. Morbi accumsan nisi id urna porttitor congue. Proin scelerisque dolor non urna vulputate mattis. Fusce vel sapien nec sem bibendum viverra. Cras consequat ligula vel ipsum semper, a blandit lectus hendrerit.",
-                   image: "2", city: "Wrocław", species: "Pies", gender: "Samica",
-                   dateLost: dateFormatter.date(from: "2023/03/25")),
-            
-            Animal(name: "Bella",
-                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi sapien, mattis et porttitor sodales, eleifend sit amet libero. Morbi accumsan nisi id urna porttitor congue. Proin scelerisque dolor non urna vulputate mattis. Fusce vel sapien nec sem bibendum viverra. Cras consequat ligula vel ipsum semper, a blandit lectus hendrerit. ",
-                   image: "3", city: "Wrocław", species: "Pies", gender: "Samica",
-                   dateLost: dateFormatter.date(from: "2023/03/30")),
-            
-            Animal(name: "Pumba",
-                   description: "Opole",
-                   image: "4", city: "Opole", species: "Pies", gender: "Samiec",
-                   dateLost: dateFormatter.date(from: "2023/04/02")),
-            
-            Animal(name: "Pumba",
-                   description: "Opole",
-                   image: "5", city: "Opole", species: "Pies", gender: "Samiec",
-                   dateLost: dateFormatter.date(from: "2023/04/01")),
-            
-            Animal(name: "Hektor",
-                   description: "Kamieniec",
-                   image: "1", city: "Kamieniec", species: "Pies", gender: "Samiec",
-                   dateLost: dateFormatter.date(from: "2023/04/03"), dateFound: dateFormatter.date(from: "2023/04/08"))
-        ]
+    @Published var animals: [LostReportResponseDTO] = []
+
+    func fetchLostReports() async {
+        do {
+            let lostReports = try await LostReportController().getAllLostReports()
+            DispatchQueue.main.async {
+                self.animals = lostReports
+            }
+        } catch {
+            print(error)
+        }
     }
     
-    func addLostAnimal(animal: Animal) {
-        animals.append(animal)
-    }
-    
-    func addFoundAnimal(animal: Animal) {
-        animals.append(animal)
+    func addLostAnimal(lostReport: LostReportRequestDTO, newAnimal: AnimalRequestDTO) {
+        
+        let animalController = AnimalController()
+        let lostReportController = LostReportController()
+        Task {
+            do {
+                try await animalController.postAnimal(name: newAnimal.name ?? "nieznane",
+                                                      chip: newAnimal.chip ?? "123456789",
+                                                      sex: AnimalSex.nieznana,
+                                                      ownerId: newAnimal.ownerId ?? 1,
+                                                      animalColorId: newAnimal.animalColorId,
+                                                      breedId: newAnimal.breedId)
+                
+                let animalsList = try await animalController.getAllAnimals()
+                
+                try await lostReportController.postLostReport(lostDate: lostReport.lostDate,
+                                                              coordinate: lostReport.coordinate,
+                                                              description: lostReport.description,
+                                                              animalId: animalsList.count,
+                                                              reportStatusId: lostReport.reportStatusId)
+                
+                await fetchLostReports()
+            } catch {
+                print("Failed to post animal: \(error)")
+            }
+        }
     }
 }

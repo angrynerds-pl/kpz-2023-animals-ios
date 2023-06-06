@@ -12,6 +12,20 @@
 		D206FD9E2A1DFAB400556B05 /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FD9D2A1DFAB400556B05 /* AnimalViewModel.swift */; };
 		D206FDA42A1E09DA00556B05 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDA32A1E09D900556B05 /* Location.swift */; };
 		D206FDA62A1E0A1500556B05 /* VetClinicsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDA52A1E0A1500556B05 /* VetClinicsMapViewModel.swift */; };
+		D206FDAB2A2672E700556B05 /* ServerCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDAA2A2672E700556B05 /* ServerCommunicator.swift */; };
+		D206FDAD2A268BB600556B05 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDAC2A268BB600556B05 /* DateFormatter.swift */; };
+		D206FDAF2A268DFF00556B05 /* AnimalResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDAE2A268DFF00556B05 /* AnimalResponseDTO.swift */; };
+		D206FDB12A268E2400556B05 /* LostReportResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDB02A268E2400556B05 /* LostReportResponseDTO.swift */; };
+		D206FDB52A26905900556B05 /* LostReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDB42A26905900556B05 /* LostReportController.swift */; };
+		D206FDB72A2743B400556B05 /* AnimalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDB62A2743B400556B05 /* AnimalController.swift */; };
+		D206FDBB2A2744B000556B05 /* AnimalRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDBA2A2744B000556B05 /* AnimalRequestDTO.swift */; };
+		D206FDBD2A2747EC00556B05 /* LostReportRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDBC2A2747EC00556B05 /* LostReportRequestDTO.swift */; };
+		D206FDBF2A2E92EF00556B05 /* OwnedAnimalTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDBE2A2E92EF00556B05 /* OwnedAnimalTileView.swift */; };
+		D206FDC12A2F5B1E00556B05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDC02A2F5B1E00556B05 /* User.swift */; };
+		D206FDC32A2F5B3D00556B05 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDC22A2F5B3D00556B05 /* HomeViewModel.swift */; };
+		D206FDC52A2F5B6000556B05 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDC42A2F5B6000556B05 /* LoginView.swift */; };
+		D206FDC72A2F5B8F00556B05 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDC62A2F5B8F00556B05 /* RegistrationView.swift */; };
+		D206FDC92A2F5F0F00556B05 /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206FDC82A2F5F0F00556B05 /* HomeScreenButton.swift */; };
 		D2B946CC2A14C92E00281429 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B946CB2A14C92E00281429 /* ImagePicker.swift */; };
 		D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6029F68DE8005718BE /* HomeView.swift */; };
 		D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54C6229F699BA005718BE /* AnimalProfileView.swift */; };
@@ -59,6 +73,20 @@
 		D206FD9D2A1DFAB400556B05 /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
 		D206FDA32A1E09D900556B05 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D206FDA52A1E0A1500556B05 /* VetClinicsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetClinicsMapViewModel.swift; sourceTree = "<group>"; };
+		D206FDAA2A2672E700556B05 /* ServerCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicator.swift; sourceTree = "<group>"; };
+		D206FDAC2A268BB600556B05 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		D206FDAE2A268DFF00556B05 /* AnimalResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResponseDTO.swift; sourceTree = "<group>"; };
+		D206FDB02A268E2400556B05 /* LostReportResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostReportResponseDTO.swift; sourceTree = "<group>"; };
+		D206FDB42A26905900556B05 /* LostReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostReportController.swift; sourceTree = "<group>"; };
+		D206FDB62A2743B400556B05 /* AnimalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalController.swift; sourceTree = "<group>"; };
+		D206FDBA2A2744B000556B05 /* AnimalRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRequestDTO.swift; sourceTree = "<group>"; };
+		D206FDBC2A2747EC00556B05 /* LostReportRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostReportRequestDTO.swift; sourceTree = "<group>"; };
+		D206FDBE2A2E92EF00556B05 /* OwnedAnimalTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedAnimalTileView.swift; sourceTree = "<group>"; };
+		D206FDC02A2F5B1E00556B05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D206FDC22A2F5B3D00556B05 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D206FDC42A2F5B6000556B05 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D206FDC62A2F5B8F00556B05 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		D206FDC82A2F5F0F00556B05 /* HomeScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		D2B946CB2A14C92E00281429 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D2C54C6029F68DE8005718BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D2C54C6229F699BA005718BE /* AnimalProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalProfileView.swift; sourceTree = "<group>"; };
@@ -114,9 +142,11 @@
 		D206FD922A1D6EA100556B05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D206FDA72A266FF500556B05 /* DTO */,
 				D2D45D7029DD72BF00821CAB /* Animal.swift */,
 				D2E193132A0B992900E6FDD0 /* Training.swift */,
 				D206FDA32A1E09D900556B05 /* Location.swift */,
+				D206FDC02A2F5B1E00556B05 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +170,7 @@
 				D206FD9A2A1D7CAF00556B05 /* OwnedAnimalViewModel.swift */,
 				D206FD9D2A1DFAB400556B05 /* AnimalViewModel.swift */,
 				D206FDA52A1E0A1500556B05 /* VetClinicsMapViewModel.swift */,
+				D206FDC22A2F5B3D00556B05 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B946CB2A14C92E00281429 /* ImagePicker.swift */,
+				D206FDAC2A268BB600556B05 /* DateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -174,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C54C6829F6C1C5005718BE /* OwnedAnimalListView.swift */,
+				D206FDBE2A2E92EF00556B05 /* OwnedAnimalTileView.swift */,
 				D2C54C6C29F6C481005718BE /* NewOwnedAnimalView.swift */,
 			);
 			path = OwnedAnimals;
@@ -195,6 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				D2C54C6029F68DE8005718BE /* HomeView.swift */,
+				D206FDC42A2F5B6000556B05 /* LoginView.swift */,
+				D206FDC62A2F5B8F00556B05 /* RegistrationView.swift */,
+				D206FDC82A2F5F0F00556B05 /* HomeScreenButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -205,6 +241,51 @@
 				D2E193112A0B878600E6FDD0 /* VetClinicsMapView.swift */,
 			);
 			path = VetClinics;
+			sourceTree = "<group>";
+		};
+		D206FDA72A266FF500556B05 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				D206FDB92A2743D600556B05 /* RequestDTO */,
+				D206FDB82A2743CC00556B05 /* ResponseDTO */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		D206FDB22A26902E00556B05 /* ServerCommunication */ = {
+			isa = PBXGroup;
+			children = (
+				D206FDB32A26904600556B05 /* Controllers */,
+				D206FDAA2A2672E700556B05 /* ServerCommunicator.swift */,
+			);
+			path = ServerCommunication;
+			sourceTree = "<group>";
+		};
+		D206FDB32A26904600556B05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D206FDB42A26905900556B05 /* LostReportController.swift */,
+				D206FDB62A2743B400556B05 /* AnimalController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D206FDB82A2743CC00556B05 /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				D206FDAE2A268DFF00556B05 /* AnimalResponseDTO.swift */,
+				D206FDB02A268E2400556B05 /* LostReportResponseDTO.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		D206FDB92A2743D600556B05 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				D206FDBA2A2744B000556B05 /* AnimalRequestDTO.swift */,
+				D206FDBC2A2747EC00556B05 /* LostReportRequestDTO.swift */,
+			);
+			path = RequestDTO;
 			sourceTree = "<group>";
 		};
 		D2D45D3A29D4957200821CAB = {
@@ -230,6 +311,7 @@
 		D2D45D4529D4957200821CAB /* kpz-2023-animals-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D206FDB22A26902E00556B05 /* ServerCommunication */,
 				D206FD922A1D6EA100556B05 /* Models */,
 				D206FD932A1D6EB400556B05 /* Views */,
 				D206FD942A1D6EC400556B05 /* ViewModels */,
@@ -398,26 +480,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C54C6529F6B348005718BE /* ReportLostAnimalView.swift in Sources */,
+				D206FDC32A2F5B3D00556B05 /* HomeViewModel.swift in Sources */,
 				D2C54C6729F6B998005718BE /* ReportFoundAnimalView.swift in Sources */,
 				D206FD9B2A1D7CAF00556B05 /* OwnedAnimalViewModel.swift in Sources */,
+				D206FDBF2A2E92EF00556B05 /* OwnedAnimalTileView.swift in Sources */,
+				D206FDC12A2F5B1E00556B05 /* User.swift in Sources */,
+				D206FDB72A2743B400556B05 /* AnimalController.swift in Sources */,
 				D206FDA62A1E0A1500556B05 /* VetClinicsMapViewModel.swift in Sources */,
 				D206FD992A1D719200556B05 /* TrainingViewModel.swift in Sources */,
 				D2C54C6D29F6C481005718BE /* NewOwnedAnimalView.swift in Sources */,
+				D206FDC52A2F5B6000556B05 /* LoginView.swift in Sources */,
+				D206FDBD2A2747EC00556B05 /* LostReportRequestDTO.swift in Sources */,
+				D206FDAF2A268DFF00556B05 /* AnimalResponseDTO.swift in Sources */,
 				D2B946CC2A14C92E00281429 /* ImagePicker.swift in Sources */,
 				D2C54C6929F6C1C5005718BE /* OwnedAnimalListView.swift in Sources */,
+				D206FDBB2A2744B000556B05 /* AnimalRequestDTO.swift in Sources */,
 				D2E1931A2A0B9A0200E6FDD0 /* TrainingListView.swift in Sources */,
 				D2D45D7729DD776C00821CAB /* AnimalListView.swift in Sources */,
+				D206FDC92A2F5F0F00556B05 /* HomeScreenButton.swift in Sources */,
 				D2D45D8329DDB47400821CAB /* ContentView.swift in Sources */,
 				D2D45D4729D4957200821CAB /* kpz_2023_animals_iosApp.swift in Sources */,
 				D2E193122A0B878600E6FDD0 /* VetClinicsMapView.swift in Sources */,
 				D2E193142A0B992900E6FDD0 /* Training.swift in Sources */,
+				D206FDAD2A268BB600556B05 /* DateFormatter.swift in Sources */,
 				D206FDA42A1E09DA00556B05 /* Location.swift in Sources */,
+				D206FDC72A2F5B8F00556B05 /* RegistrationView.swift in Sources */,
 				D2C54C6129F68DE8005718BE /* HomeView.swift in Sources */,
 				D2D45D7529DD732200821CAB /* AnimalTileView.swift in Sources */,
 				D2D45D7129DD72BF00821CAB /* Animal.swift in Sources */,
 				D2E193182A0B999D00E6FDD0 /* TrainingProfileView.swift in Sources */,
+				D206FDB12A268E2400556B05 /* LostReportResponseDTO.swift in Sources */,
+				D206FDAB2A2672E700556B05 /* ServerCommunicator.swift in Sources */,
 				D2E193162A0B997900E6FDD0 /* TrainingTileView.swift in Sources */,
 				D206FD9E2A1DFAB400556B05 /* AnimalViewModel.swift in Sources */,
+				D206FDB52A26905900556B05 /* LostReportController.swift in Sources */,
 				D2C54C6329F699BB005718BE /* AnimalProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,79 +9,69 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var animalViewModel = AnimalViewModel()
+    @StateObject var homeViewModel = HomeViewModel()
     
     @State private var showLoginView = false
     @State private var showRegistrationView = false
+    
+    func fetchAnimals() {
+        let animalController = AnimalController()
+        Task {
+            do {
+                let animalsList = try await animalController.getAllAnimals()
+                print(animalsList)
+            } catch {
+                print("Failed to get lost reports: \(error)")
+            }
+        }
+    }
+    
+    func fetchLostReports() {
+        let lostReportController = LostReportController()
+        Task {
+            do {
+                let reportList = try await lostReportController.getAllLostReports()
+                print(reportList)
+            } catch {
+                print("Failed to get lost reports: \(error)")
+            }
+        }
+    }
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Image("6")
+                    Image("logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200, height: 200)
                         .padding()
-                      
+                    
+//                    Button(action: {
+//                        fetchAnimals()
+//                    }) {
+//                        Text("Fetch Animals")
+//                    }
+//
+//                    Button(action: {
+//                        fetchLostReports()
+//                    }) {
+//                        Text("Fetch Lost Reports")
+//                    }
+                    
                     let columns = [
                         GridItem(.flexible(), spacing: 20),
                         GridItem(.flexible(), spacing: 20)
                     ]
                     
                     LazyVGrid(columns: columns, spacing: 20) {
-                        NavigationLink(destination: ReportLostAnimalView(animalVM: animalViewModel)) {
-                            Text("Zgłoszenie zaginięcia")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        
-                        NavigationLink(destination: ReportFoundAnimalView(animalVM: animalViewModel)) {
-                            Text("Zgłoszenie znalezienia")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        
-                        NavigationLink(destination: AnimalListView(animalVM: animalViewModel)) {
-                            Text("Przegląd zaginionych zwierząt")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        
-                        NavigationLink(destination: OwnedAnimalListView()) {
-                            Text("Profil zwierzaka")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        
-                        NavigationLink(destination: TrainingListView()) {
-                            Text("Szkolenia")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        
-                        NavigationLink(destination: VetClinicsMapView()) {
-                            Text("Przychodnie weterynaryjne")
-                                .frame(width: 120, height: 100)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
+                        HomeScreenButton(destination: ReportLostAnimalView(animalVM: animalViewModel), text: "Zgłoszenie zaginięcia", showLoginView: $showLoginView, homeViewModel: homeViewModel)
+                        HomeScreenButton(destination: ReportFoundAnimalView(animalVM: animalViewModel), text: "Zgłoszenie znalezienia", showLoginView: $showLoginView, homeViewModel: homeViewModel)
+                        HomeScreenButton(destination: AnimalListView(animalVM: animalViewModel), text: "Przegląd zaginionych zwierząt", showLoginView: $showLoginView, homeViewModel: homeViewModel)
+                        HomeScreenButton(destination: OwnedAnimalListView(), text: "Profil zwierzaka", showLoginView: $showLoginView, homeViewModel: homeViewModel)
+                        HomeScreenButton(destination: TrainingListView(), text: "Szkolenia", showLoginView: $showLoginView, homeViewModel: homeViewModel)
+                        HomeScreenButton(destination: VetClinicsMapView(), text: "Przychodnie weterynaryjne", showLoginView: $showLoginView, homeViewModel: homeViewModel)
                         
                     }
                     .padding(40)
@@ -106,59 +96,17 @@ struct HomeView: View {
                 }
             )
             .fullScreenCover(isPresented: $showLoginView) {
-                LoginView()
+                LoginView(homeViewModel: homeViewModel)
             }
             .fullScreenCover(isPresented: $showRegistrationView) {
-                RegistrationView()
+                RegistrationView(homeViewModel: homeViewModel)
             }
-        }
-    }
-}
-
-struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("Email", text: $email)
-                    SecureField("Hasło", text: $password)
-                }
-                Button("Zaloguj") {
-                    print("Logowanie... email: \(email)     hasło: \(password)")
-                }
-            }
-            .navigationBarTitle("Logowanie", displayMode: .inline)
-            .navigationBarItems(leading: Button("Zamknij") { presentationMode.wrappedValue.dismiss() })
-        }
-    }
-}
-
-struct RegistrationView: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var confirmPassword = ""
-    @State private var name = ""
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("Email", text: $email)
-                    SecureField("Hasło", text: $password)
-                    SecureField("Powtórz hasło", text: $confirmPassword)
-                    TextField("Imię", text: $name)
-                }
-                Button("Zarejestruj") {
-                    print("Rejestracja... email: \(email)   hasło: \(password)  powtórzone hasło: \(confirmPassword)    imię: \(name)")
-                }
-            }
-            .navigationBarTitle("Rejestracja", displayMode: .inline)
-            .navigationBarItems(leading: Button("Zamknij") { presentationMode.wrappedValue.dismiss() })
+            .background(
+                Image("bg1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+            )
         }
     }
 }

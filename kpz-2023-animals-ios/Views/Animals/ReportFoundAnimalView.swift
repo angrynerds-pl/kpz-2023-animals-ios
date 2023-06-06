@@ -65,26 +65,26 @@ struct ReportFoundAnimalView: View {
                     TextField("Płeć", text: $gender)
                 }
 
-                Button(action: {
-                    let newAnimal = Animal(name: name,
-                                           description: description,
-                                           image: image,
-                                           city: city,
-                                           species: species,
-                                           breed: breed,
-                                           gender: gender,
-                                           dateFound: dateFound)
-                    animalVM.addFoundAnimal(animal: newAnimal)
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Zatwierdź")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding()
-                        .background(isFormValid ? Color.blue : Color.blue.opacity(0.5))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .disabled(!isFormValid)
+//                Button(action: {
+//                    let newAnimal = Animal(name: name,
+//                                           description: description,
+//                                           image: image,
+//                                           city: city,
+//                                           species: species,
+//                                           breed: breed,
+//                                           gender: gender,
+//                                           dateFound: dateFound)
+//                    animalVM.addFoundAnimal(animal: newAnimal)
+//                    presentationMode.wrappedValue.dismiss()
+//                }) {
+//                    Text("Zatwierdź")
+//                        .frame(minWidth: 0, maxWidth: .infinity)
+//                        .padding()
+//                        .background(isFormValid ? Color.blue : Color.blue.opacity(0.5))
+//                        .foregroundColor(.white)
+//                        .cornerRadius(10)
+//                }
+//                .disabled(!isFormValid)
             }
             .navigationBarTitle("Zgłoś znalezienie", displayMode: .inline)
         }

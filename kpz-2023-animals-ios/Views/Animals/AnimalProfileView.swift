@@ -8,20 +8,12 @@
 import SwiftUI
 
 struct AnimalProfileView: View {
-    let animal: Animal
-    
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        formatter.locale = Locale(identifier: "pl_PL")
-        return formatter
-    }
+    let animal: AnimalResponseDTO
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Image(animal.image)
+                Image("6")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 400, height: 400)
@@ -31,45 +23,36 @@ struct AnimalProfileView: View {
                 Text("Imię: \(animal.name)")
                     .font(.system(size: 26, weight: .semibold))
                     .padding(.horizontal, 40)
-
-                Text("Gatunek: \(animal.species)")
-                    .font(.title2)
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 5)
                 
-                Text("Rasa: \(animal.breed)")
+                Text("Gatunek: \(animal.breed.type.name)")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
 
-                Text("Płeć: \(animal.gender)")
+                Text("Rasa: \(animal.breed.name)")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
                 
-                Text("Opis: \(animal.description)")
+                Text("Płeć: \(animal.sex.rawValue)")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
                 
-                Text("\((animal.dateLost != nil) || (animal.dateFound != nil) ? "Miejsce zaginięcia:" : "Miasto:") \(animal.city)")
+                Text("Kolor: \(animal.color.name)")
                     .font(.title2)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
                 
-                if let dateLost = animal.dateLost {
-                    Text("Data zaginięcia: \(dateFormatter.string(from: dateLost))")
-                        .font(.title2)
-                        .padding(.leading, 40)
-                        .padding(.vertical, 5)
-                }
-
-                if let dateFound = animal.dateFound {
-                    Text("Data znalezienia: \(dateFormatter.string(from: dateFound))")
-                        .font(.title2)
-                        .padding(.leading, 40)
-                        .padding(.vertical, 5)
-                }
+                Text("Właściciel: \(animal.ownerName) \(animal.ownerLastName)")
+                    .font(.title2)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 5)
+                
+                Text("Numer telefonu właściciela: \(animal.ownerPhoneNumber)")
+                    .font(.title2)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 5)
 
                 Spacer()
             }

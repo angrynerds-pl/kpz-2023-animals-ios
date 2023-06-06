@@ -12,67 +12,42 @@ struct NewOwnedAnimalView: View {
     @ObservedObject var ownedAnimalViewModel: OwnedAnimalViewModel
 
     @State private var name: String = ""
-    @State private var description: String = ""
-    @State private var image: String = "8"
-    @State private var city: String = ""
-    @State private var species: String = ""
-    @State private var breed: String = ""
-    @State private var gender: String = ""
-    @State private var dateLost: Date = Date()
+    @State private var chip: String = ""
+    @State private var ownerId: Int? = nil
+    @State private var animalColorId: Int = 1
+    @State private var breedId: Int = 1
     
-    @State private var showImagePicker = false
-    @State private var pickedImage: UIImage?
-    
+    @State private var sexString: String = "NIEZNANA"
+    let sexes = AnimalSex.allCases.map { $0.rawValue }
+
     private var isFormValid: Bool {
-        !name.isEmpty && !description.isEmpty && !image.isEmpty &&
-        !city.isEmpty && !species.isEmpty && !breed.isEmpty && !gender.isEmpty
+        !name.isEmpty
     }
 
     var body: some View {
         NavigationView {
             Form {
-                ZStack {
-                    if let uiImage = pickedImage {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFit()
-                    } else {
-                        Rectangle()
-                            .fill(.secondary)
-                            .frame(height: 100)
-                        Text("Dodaj zdjęcie")
-                            .foregroundColor(.white)
-                            .font(.headline)
-                    }
-                }
-                .onTapGesture {
-                    showImagePicker.toggle()
-                }
-                .sheet(isPresented: $showImagePicker) {
-                    ImagePicker(image: $pickedImage)
-                }
-                
                 Section(header: Text("Podstawowe informacje")) {
                     TextField("Imię", text: $name)
-                    TextField("Opis", text: $description)
-                    TextField("Miasto", text: $city)
-                }
-
-                Section(header: Text("Dodatkowe informacje")) {
-                    TextField("Gatunek", text: $species)
-                    TextField("Rasa", text: $breed)
-                    TextField("Płeć", text: $gender)
+                    TextField("Numer chipa", text: $chip)
+                    Picker("Płeć", selection: $sexString) {
+                        ForEach(sexes, id: \.self) {
+                            Text($0)
+                        }
+                    }.pickerStyle(.menu)
+                    TextField("ID właściciela", value: $ownerId, formatter: NumberFormatter())
+                    TextField("ID koloru zwierzęcia", value: $animalColorId, formatter: NumberFormatter())
+                    TextField("ID rasy zwierzęcia", value: $breedId, formatter: NumberFormatter())
                 }
 
                 Button(action: {
-                    let newAnimal = Animal(name: name,
-                                           description: description,
-                                           image: image,
-                                           city: city,
-                                           species: species,
-                                           breed: breed,
-                                           gender: gender)
-                    ownedAnimalViewModel.addOwnedAnimal(animal: newAnimal)
+                    let newAnimal = AnimalRequestDTO(name: name,
+                                                     chip: chip,
+                                                     sex: AnimalSex(rawValue: sexString) ?? .nieznana,
+                                                     ownerId: ownerId,
+                                                     animalColorId: animalColorId,
+                                                     breedId: breedId)
+                    ownedAnimalViewModel.addOwnedAnimal(newAnimal: newAnimal)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Zatwierdź")
@@ -88,4 +63,3 @@ struct NewOwnedAnimalView: View {
         }
     }
 }
-

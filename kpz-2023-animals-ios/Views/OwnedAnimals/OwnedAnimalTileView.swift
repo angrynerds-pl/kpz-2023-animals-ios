@@ -1,15 +1,14 @@
 //
-//  AnimalTIleView.swift
+//  OwnedAnimalTileView.swift
 //  kpz-2023-animals-ios
 //
-//  Created by Rafał Kwiecień on 05/04/2023.
+//  Created by Rafał Kwiecień on 06/06/2023.
 //
 
 import SwiftUI
 
-struct AnimalTileView: View {
+struct OwnedAnimalTileView: View {
     let animal: AnimalResponseDTO
-    let lostReport: LostReportResponseDTO
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -31,12 +30,6 @@ struct AnimalTileView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(animal.name)
                         .font(.system(size: 26, weight: .semibold))
-                    
-                    Text("Data zaginięcia: \(formatDate(isoDate: lostReport.lostDate) ?? "nieznana")")
-                        .font(.system(size: 16))
-                    
-                    Text("Opis zaginięcia: \(lostReport.description)")
-                        .font(.system(size: 16))
                 }
                 .padding(.leading, 10)
             }
