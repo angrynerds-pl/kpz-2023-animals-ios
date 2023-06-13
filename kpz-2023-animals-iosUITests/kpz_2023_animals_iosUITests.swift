@@ -9,33 +9,41 @@ import XCTest
 
 final class kpz_2023_animals_iosUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testLoginScreen() {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let menuButton = app.buttons["ellipsis"]
+        XCTAssertTrue(menuButton.exists)
+        menuButton.tap()
+        
+        let menuLoginButton = app.buttons["loginButton"]
+        XCTAssertTrue(menuLoginButton.exists)
+        menuLoginButton.tap()
+
+        let emailField = app.textFields["emailField"]
+        let passwordField = app.secureTextFields["passwordField"]
+        let loginButton = app.buttons["loginButton"]
+
+        XCTAssertTrue(emailField.waitForExistence(timeout: 5))
+        XCTAssertTrue(passwordField.waitForExistence(timeout: 5))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 5))
+
+        XCTAssertTrue(emailField.isHittable)
+        XCTAssertTrue(passwordField.isHittable)
+        XCTAssertTrue(loginButton.isHittable)
+
+        emailField.tap()
+        emailField.typeText("incorrectEmail")
+            
+        passwordField.tap()
+        passwordField.typeText("incorrectPassword")
+
+        loginButton.tap()
+
+        XCTAssertTrue(emailField.exists)
+        XCTAssertTrue(passwordField.exists)
+        XCTAssertTrue(loginButton.exists)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
 }

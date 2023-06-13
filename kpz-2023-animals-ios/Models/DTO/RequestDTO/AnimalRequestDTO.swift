@@ -15,7 +15,8 @@ struct AnimalRequestDTO: Codable {
     let animalColorId: Int
     let breedId: Int
 
-    init(name: String? = nil, chip: String? = nil, sex: AnimalSex = .nieznana, ownerId: Int? = nil, animalColorId: Int = 1, breedId: Int = 1) {
+    init(name: String? = nil, chip: String? = nil, sex: AnimalSex = .nieznana,
+         ownerId: Int? = nil, animalColorId: Int = 1, breedId: Int = 1) {
         self.name = name
         self.chip = chip
         self.sex = sex

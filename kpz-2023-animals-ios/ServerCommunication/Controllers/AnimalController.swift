@@ -13,8 +13,12 @@ class AnimalController {
         return try await serverCommunicator.getAll(endpoint: "animals")
     }
 
-    func postAnimal(name : String, chip : String, sex : AnimalSex, ownerId : Int, animalColorId : Int, breedId : Int) async throws {
-        let animalRequestDTO = AnimalRequestDTO(name: name, chip: chip, sex: sex, ownerId: ownerId, animalColorId: animalColorId, breedId: breedId)
+    func postAnimal(name : String, chip : String, sex : AnimalSex,
+                    ownerId : Int, animalColorId : Int, breedId : Int) async throws {
+        
+        let animalRequestDTO = AnimalRequestDTO(name: name, chip: chip, sex: sex,
+                                                ownerId: ownerId, animalColorId: animalColorId,
+                                                breedId: breedId)
         let serverCommunicator = ServerCommunicator ()
         _ = try await serverCommunicator.post(endpoint: "animals", item: animalRequestDTO)
     }

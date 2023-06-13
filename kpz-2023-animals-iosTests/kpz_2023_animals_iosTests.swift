@@ -10,27 +10,40 @@ import XCTest
 
 final class kpz_2023_animals_iosTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testLoginWithValidCredentials() {
+        let viewModel = HomeViewModel()
+        XCTAssertFalse(viewModel.isLogged)
+        viewModel.login(email: "Login", password: "123")
+        XCTAssertTrue(viewModel.isLogged)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testLoginWithInvalidCredentials() {
+        let viewModel = HomeViewModel()
+        viewModel.login(email: "wrongEmail", password: "wrongPassword")
+        XCTAssertFalse(viewModel.isLogged)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testRegisterAndLoginWithNewUser() {
+        let viewModel = HomeViewModel()
+        let newEmail = "newEmail"
+        let newPassword = "newPassword"
+        
+        viewModel.register(email: newEmail, password: newPassword)
+        viewModel.login(email: newEmail, password: newPassword)
+        XCTAssertTrue(viewModel.isLogged)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testFetchAnimals() async {
+        let expectation = XCTestExpectation(description: "Fetch Animals")
+        let viewModel = OwnedAnimalViewModel()
+        
+        await viewModel.fetchAnimals()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            XCTAssertFalse(viewModel.ownedAnimals.isEmpty)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 10.0)
     }
-
 }

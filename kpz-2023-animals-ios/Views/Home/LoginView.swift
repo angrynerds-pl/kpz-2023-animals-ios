@@ -18,7 +18,9 @@ struct LoginView: View {
             Form {
                 Section {
                     TextField("Email", text: $email)
+                        .accessibility(identifier: "emailField")
                     SecureField("Hasło", text: $password)
+                        .accessibility(identifier: "passwordField")
                 }
                 Button("Zaloguj") {
                     homeViewModel.login(email: email, password: password)
@@ -26,6 +28,7 @@ struct LoginView: View {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
+                .accessibility(identifier: "loginButton")
             }
             .navigationBarTitle("Logowanie", displayMode: .inline)
             .navigationBarItems(leading: Button("Zamknij") { presentationMode.wrappedValue.dismiss() })

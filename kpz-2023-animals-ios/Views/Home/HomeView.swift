@@ -83,6 +83,7 @@ struct HomeView: View {
                     Button(action: { showLoginView = true }) {
                         Text("Logowanie")
                         Image(systemName: "person.circle")
+                            .accessibility(identifier: "loginButton")
                     }
                     
                     Button(action: { showRegistrationView = true }) {
@@ -93,6 +94,7 @@ struct HomeView: View {
                     Image(systemName: "ellipsis")
                         .padding()
                         .accessibilityLabel("Więcej opcji")
+                        .accessibility(identifier: "ellipsis")
                 }
             )
             .fullScreenCover(isPresented: $showLoginView) {
